@@ -102,10 +102,15 @@ body {
   }
   
   .file-upload-image {
-    max-height: 200px;
-    max-width: 200px;
+    max-height: 140px;
+    max-width: 190px;
     margin: auto;
-    padding: 20px;
+    padding: 0px;
+    border: 3px solid #ffffff;
+    /* border-radius: 70px; */
+    -moz-border-radius: 70px;
+    -khtml-border-radius: 70px;
+    -webkit-border-radius: 70px;
   }
   
   .remove-image {
@@ -176,6 +181,14 @@ body {
     }
   }
 
+  .youtube-cover{
+    display: inline-block;
+  }
+  .icccc{
+    width: fit-content;
+    text-align: center;
+  }
+
   .youtube-link{
     font-family: 'East Sea Dokdo', cursive;
     font-size: 1.5rem;
@@ -195,7 +208,8 @@ body {
   }
 
   .youtube-icon{
-      width: 8%;
+      width: 2.5vw;
+      height: 2.5vw;
   }
   .upload{    
     width: 20%;
@@ -227,4 +241,29 @@ navbar-brand {
   font-size: 2.25rem;
   /* line-height: inherit; */
   /* white-space: nowrap; */
+}
+
+.result-message{
+  margin-top: 0;
+  font-family: 'East Sea Dokdo', cursive;
+  margin-bottom: 0.5rem;
+  font-size: 2.8rem;
+}
+.result-example{
+  margin-top: 0;
+  font-family: 'East Sea Dokdo', cursive;
+  margin-bottom: 0.5rem;
+  font-size: 1.7rem;
+}
+.result-couple{
+  margin-top: 0;
+  font-family: 'East Sea Dokdo', cursive;
+  margin-bottom: 0.1rem;
+  font-size: 1.6rem;
+}
+.result-coupleEx{
+  margin-top: 0;
+  font-family: 'East Sea Dokdo', cursive;
+  margin-bottom: 5.8rem;
+  font-size: 1.6rem;
 }
