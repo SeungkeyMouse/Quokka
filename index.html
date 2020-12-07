@@ -58,10 +58,13 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="">코로나로부터 안전한 세계가 되기를 기원합니다.</a>
-                        <a class="dropdown-item" style="text-decoration: underline;" href="https://happybean.naver.com/donation/DonateHomeMain.nhn">네이버 기부</a>
-                        <a class="dropdown-item" style="text-decoration: underline;" href="https://www.sc.or.kr/">세이브 더 칠드런</a>
+                        <a class="dropdown-item" style="text-decoration: underline;"
+                            href="https://happybean.naver.com/donation/DonateHomeMain.nhn">네이버 기부</a>
+                        <a class="dropdown-item" style="text-decoration: underline;" href="https://www.sc.or.kr/">세이브 더
+                            칠드런</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" style="text-decoration: underline;" href="https://www.wwfkorea.or.kr/campaign/wildlife/">WWF:멸종위기종 후원</a>
+                        <a class="dropdown-item" style="text-decoration: underline;"
+                            href="https://www.wwfkorea.or.kr/campaign/wildlife/">WWF:멸종위기종 후원</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -92,7 +95,7 @@
 
 
     <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <div class="container file-upload">
+    <div class="container file-upload" id ="bgfile-upload">
 
         <div class="image-upload-wrap">
             <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
@@ -102,7 +105,7 @@
             </div>
         </div>
         <div class="file-upload-content">
-            
+
             <img class="file-upload-image" id="face-image" src="#" alt="your image" />
             <!--결과창-->
             <p class="you-message"></p>
@@ -120,7 +123,7 @@
 
             <div class="image-title-wrap">
                 <button type="button" onclick="location.href='index.html'" class="remove-image"> 다른사진으로 재시도 </button>
-                
+
             </div>
         </div>
     </div>
@@ -143,7 +146,8 @@
     <section class="mt-5 youtube">
         <div class="container mt-5 youtube-cover d-flex flex-row-reverse ">
             <div class="icccc">
-                <a href="https://www.youtube.com/c/%EC%A1%B0%EC%BD%94%EB%94%A9JoCoding/featured" class="youtube-link"> By 조코딩 유튜브 채널</a>
+                <a href="https://www.youtube.com/c/%EC%A1%B0%EC%BD%94%EB%94%A9JoCoding/featured" class="youtube-link">
+                    By 조코딩 유튜브 채널</a>
                 <img src="img\youtube-copy.png" alt="youtube-icon" class="youtube-icon">
             </div>
         </div>
@@ -253,12 +257,13 @@
 
         // run the webcam image through the image model
         async function predict() {
+            changeBG();
             // predict can take in an image, video or canvas html element
             var image = document.getElementById("face-image");
             const prediction = await model.predict(image, false);
             prediction.sort((a, b) => parseFloat(b.probability) - (a.probability));
             console.log(prediction[0].className);
-            var youMessage="당신은.."
+            var youMessage = "당신은.."
             var resultMessage;
             var resultImage;
             var resultExample;
@@ -275,16 +280,16 @@
                 case "stage1":
                     resultMessage = "맨날 졸려서 뒹굴거리는 쿼카"
                     resultImage = "<img class='file-upload-image' id='쿼카' src='img/101.jpg' alt='your image' />"
-                    resultExample ="사실 이거 테스트하기도 귀찮지만, 뒹굴거리다가 심심하니까 테스트했죠?\n당신은 태생부터 졸린 쿼카입니다. 하지만 당신은 자는 모습조차도 귀염둥이>_<\n이불속에서 뒹굴거리는게 최고지만, 막상 나온다면 일을 척척 해내는 쿼카입니다!"
+                    resultExample = "사실 이거 테스트하기도 귀찮지만, 뒹굴거리다가 심심하니까 테스트했죠?\n당신은 태생부터 졸린 쿼카입니다. 하지만 당신은 자는 모습조차도 귀염둥이>_<\n이불속에서 뒹굴거리는게 최고지만, 막상 나온다면 일을 척척 해내는 쿼카입니다!"
                     resultCouple = "당신의 베스트 쿼카 : 맨날 졸려서 뒹굴거리는 쿼카\n"
-                    resultCoupleEx =  "같이 뒹굴거리면서 노는게 세상 제일 좋아요-.-"
+                    resultCoupleEx = "같이 뒹굴거리면서 노는게 세상 제일 좋아요-.-"
                     break;
 
                 case "stage2":
                     resultMessage = "해맑은 순.수.덩.어.리. 쿼카"
                     resultImage = "<img class='file-upload-image' id='쿼카' src='img/201.jpg' alt='your image' />"
                     resultExample = "이렇게 순수할수가!! 당신은 너무 순수하다가 못해 순진하다고 할까요?\n하지만 이러한 백지같은 매력의 당신을 좋아하는 쿼카들과 친하게 지내지만,\n사실 자기를 좋아하는 지는 몰라요! 헤헤~더 좋아해듀뎨됴 :)"
-                    resultCouple ="당신의 베스트 쿼카: 본인을 아싸라고 기만하는 핵인싸 쿼카\n"
+                    resultCouple = "당신의 베스트 쿼카: 본인을 아싸라고 기만하는 핵인싸 쿼카\n"
                     resultCoupleEx = "핵인싸 쿼카와 함께라면 다른 쿼카들이 당신을 순수덩어리라고 무시하지 않을거에요!"
                     break;
 
@@ -306,6 +311,7 @@
                 default:
                     resultMessage = "알수없음"
             }
+
             $('.you-message').html(youMessage);
             $('.result-message').html(resultMessage);
             $('.result-image').html(resultImage);
@@ -322,6 +328,10 @@
             }
             */
         }
+        function changeBG() {
+            document.getElementById("bgfile-upload").style.backgroundColor = "#964b00";  //RGB코드        
+        }
+
     </script>
 </body>
 <!-- Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
