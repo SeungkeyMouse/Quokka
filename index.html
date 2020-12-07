@@ -102,8 +102,10 @@
             </div>
         </div>
         <div class="file-upload-content">
+            
             <img class="file-upload-image" id="face-image" src="#" alt="your image" />
             <!--결과창-->
+            <p class="you-message"></p>
             <p class="result-message"></p>
             <p class="result-image"></p>
             <p class="result-example"></p>
@@ -256,6 +258,7 @@
             const prediction = await model.predict(image, false);
             prediction.sort((a, b) => parseFloat(b.probability) - (a.probability));
             console.log(prediction[0].className);
+            var youMessage="당신은.."
             var resultMessage;
             var resultImage;
             var resultExample;
@@ -280,7 +283,7 @@
                 case "stage2":
                     resultMessage = "해맑은 순.수.덩.어.리. 쿼카"
                     resultImage = "<img class='file-upload-image' id='쿼카' src='img/201.jpg' alt='your image' />"
-                    resultExample = "이렇게 순수할수가!! 당신은 너무 순수하다가 못해 순진하다고 할까요?\n하지만 이러한 백지같은 매력의 당신을 좋아하는 쿼카들과 친하게 지내지만,\n사실 자기를 좋아하는 지는 몰라요! 헤헤~더 좋아해듀뎨둄 :)"
+                    resultExample = "이렇게 순수할수가!! 당신은 너무 순수하다가 못해 순진하다고 할까요?\n하지만 이러한 백지같은 매력의 당신을 좋아하는 쿼카들과 친하게 지내지만,\n사실 자기를 좋아하는 지는 몰라요! 헤헤~더 좋아해듀뎨됴 :)"
                     resultCouple ="당신의 베스트 쿼카: 본인을 아싸라고 기만하는 핵인싸 쿼카\n"
                     resultCoupleEx = "핵인싸 쿼카와 함께라면 다른 쿼카들이 당신을 순수덩어리라고 무시하지 않을거에요!"
                     break;
@@ -303,6 +306,7 @@
                 default:
                     resultMessage = "알수없음"
             }
+            $('.you-message').html(youMessage);
             $('.result-message').html(resultMessage);
             $('.result-image').html(resultImage);
             $('.result-example').html(resultExample);
