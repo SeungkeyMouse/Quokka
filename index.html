@@ -81,7 +81,7 @@
     <section class="section">
         <h1 class="title">당신이 쿼카라면</h1>
         <h2 class="subtitle">당신은 어떤 쿼카인가요?</h2>
-
+        <h3 class="title">인공지능으로 닮은 쿼카 찾기</h3>
     </section>
 
     <div class="mb-7 addfitTop">
@@ -102,6 +102,7 @@
             <div class="drag-text">
                 <img src="img/upload.jpg" class="mt-5 pt-5 upload">
                 <h3 class="mb-5 pb-5 pt-4upload-text">쿼카처럼 환한 얼굴 사진을 올려놓거나 눌러서 업로드하세요!</h3>
+                <h6>사용자의 사진은 어디에도 저장되지않으니 안심하셔도 됩니다 :)</h6>
             </div>
         </div>
         <div class="file-upload-content">
@@ -257,7 +258,6 @@
 
         // run the webcam image through the image model
         async function predict() {
-            changeBG();
             // predict can take in an image, video or canvas html element
             var image = document.getElementById("face-image");
             const prediction = await model.predict(image, false);
@@ -270,40 +270,45 @@
             var resultCouple;
             switch (prediction[0].className) {
                 case "stage0":
+                    changeBG("steelblue");
                     resultMessage = "엄.근.진 시크한 매력의 쿼카"
-                    resultImage = "<img class='file-upload-image' id='쿼카' src='img/001.jpg' alt='your image' />"
+                    resultImage = "<img class='file-upload-image' id='쿼카' src='img/000.gif' alt='your image' />"
                     resultExample = "쿼카라면 다 싱글벙글할거라고 생각했다면 큰 오산!\n노련한 눈빛으로 다른 쿼카들을 카리스마 있게 이끌어보세요!\n하지만 매력쟁이 쿼카인 당신은 수많은 쿼카들에게 고백으로 혼냄 당할수도..?! 5252~"
                     resultCouple = "당신의 베스트 쿼카: 그냥 다 주는대로 잘 먹는 폭식 쿼카\n"
                     resultCoupleEx = "당신이 꼬시기 제일 쉬운 쿼카지만.. 쉽사리 꼬셨다가 당신의 지갑을 다 거덜내버릴수도..!"
                     break;
 
                 case "stage1":
+                    changeBG("#964C35");
                     resultMessage = "맨날 졸려서 뒹굴거리는 쿼카"
-                    resultImage = "<img class='file-upload-image' id='쿼카' src='img/101.jpg' alt='your image' />"
+                    resultImage = "<img class='file-upload-image' id='쿼카' src='img/100.gif' alt='your image' />"
                     resultExample = "사실 이거 테스트하기도 귀찮지만, 뒹굴거리다가 심심하니까 테스트했죠?\n당신은 태생부터 졸린 쿼카입니다. 하지만 당신은 자는 모습조차도 귀염둥이>_<\n이불속에서 뒹굴거리는게 최고지만, 막상 나온다면 일을 척척 해내는 쿼카입니다!"
                     resultCouple = "당신의 베스트 쿼카 : 맨날 졸려서 뒹굴거리는 쿼카\n"
                     resultCoupleEx = "같이 뒹굴거리면서 노는게 세상 제일 좋아요-.-"
                     break;
 
                 case "stage2":
-                    resultMessage = "해맑은 순.수.덩.어.리. 쿼카"
-                    resultImage = "<img class='file-upload-image' id='쿼카' src='img/201.jpg' alt='your image' />"
+                    changeBG("seashell");
+                    resultMessage = "(희귀종!)해맑은 순.수.덩.어.리. 쿼카"
+                    resultImage = "<img class='file-upload-image' id='쿼카' src='img/200.gif' alt='your image' />"
                     resultExample = "이렇게 순수할수가!! 당신은 너무 순수하다가 못해 순진하다고 할까요?\n하지만 이러한 백지같은 매력의 당신을 좋아하는 쿼카들과 친하게 지내지만,\n사실 자기를 좋아하는 지는 몰라요! 헤헤~더 좋아해듀뎨됴 :)"
                     resultCouple = "당신의 베스트 쿼카: 본인을 아싸라고 기만하는 핵인싸 쿼카\n"
                     resultCoupleEx = "핵인싸 쿼카와 함께라면 다른 쿼카들이 당신을 순수덩어리라고 무시하지 않을거에요!"
                     break;
 
                 case "stage3":
+                    changeBG("darkorange");
                     resultMessage = "그냥 다 주는대로 잘 먹는 폭식 쿼카"
-                    resultImage = "<img class='file-upload-image' id='쿼카' src='img/301.jpg' alt='your image' />"
+                    resultImage = "<img class='file-upload-image' id='쿼카' src='img/300.gif' alt='your image' />"
                     resultExample = "쿼카계의 먹방 BJ.. 다른 쿼카들이 건네주는 음식은 다 잘 받아먹어요!\n처음보는 인간이 맛있는걸 주면 바로 홀라당 넘어가버려요! '맛있는거주는사람=좋은사람'\n당신과 친해지고 싶으면 먹을거를 주면 된다는것을 들키지마세요!"
                     resultCouple = "당신의 베스트 쿼카 : 엄.근.진 시크한 매력의 쿼카\n"
                     resultCoupleEx = "시크하게 자기음식을 건네주는 쿼카의 모습에 당신은 홀라당 넘어가버릴지도..!"
                     break;
 
                 case "stage4":
+                    changeBG("lightpink");
                     resultMessage = "본인 아싸라고 기만하는 핵인싸 쿼카"
-                    resultImage = "<img class='file-upload-image' id='쿼카' src='img/401.jpg' alt='your image' />"
+                    resultImage = "<img class='file-upload-image' id='쿼카' src='img/400.gif' alt='your image' />"
                     resultExample = "사실 본인이 인싸인거 알고 있잖아요~ 당신의 웃는 얼굴만 봐도 다른 쿼카들은 꺄르르~웃어넘어가요>.< \n주변에 항상 사람이 많은 쿼카상인 당신은 행복한 삶을 살고있습니다!\n주변 쿼카들한테 있을 때 잘하는거. 잊지 않기? 찡긋>.="
                     resultCouple = "당신의 베스트 쿼카 : 해맑은 순.수.덩.어.리 쿼카\n"
                     resultCoupleEx = "순.수.덩.어.리인 쿼카가 곁에 있다면 당신을 한층 더 빛나게 해줄거에요!"
@@ -328,8 +333,8 @@
             }
             */
         }
-        function changeBG() {
-            document.getElementById("bgfile-upload").style.backgroundColor = "#964b00";  //RGB코드        
+        function changeBG(color) {
+            document.getElementById("bgfile-upload").style.backgroundColor = color;  //RGB코드        
         }
 
     </script>
