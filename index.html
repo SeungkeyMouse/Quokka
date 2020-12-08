@@ -31,7 +31,21 @@
     <link rel="stylesheet" href="style.css">
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5fcc8dfaf2d34e72"></script>
+    
+    <!-- 카카오 메시지 -->
+    <!-- Kakao API -->
+    <!-- <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script>
+        Kakao.init('7c93d6dea0692b1296d4960a0cff3934');
+        console.log(Kakao.isInitialized());
+        $("#btn").click(function (e) { //jquery를 사용한다 가정
+            e.preventDefault();   //이벤트 버블링 prevent
 
+            Kakao.Link.sendCustom({
+                templateId: 42124   // 15번 항목에서 확인하였던 이벤트번호 등록 
+            });
+        });
+    </script> -->
 
 </head>
 
@@ -119,10 +133,10 @@
 
             <!-- 공유버튼 -->
             <!-- Go to www.addthis.com/dashboard to customize your tools -->
-        
+<!-- 
             <div class="box_sns">
-                <a href="#btn" class="link_sns" role="button"></a>
-            </div>
+                <a href="#btn" class="link_sns"></a>
+            </div> -->
             <div class="image-title-wrap">
                 <button type="button" onclick="location.href='index.html'" class="remove-image"> 다른사진으로 재시도 </button>
             </div>
@@ -344,19 +358,7 @@
 
     </script>
 
-    <!--카카오 메시지-->
-    <!-- Kakao API -->
-    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-    <script>
-        Kakao.init('7c93d6dea0692b1296d4960a0cff3934');
-        $("#btn").click(function (e) { //jquery를 사용한다 가정
-            e.preventDefault();   //이벤트 버블링 prevent
 
-            Kakao.Link.sendCustom({
-                templateId: 42124   // 15번 항목에서 확인하였던 이벤트번호 등록 
-            });
-        });
-    </script>
 </body>
 <!-- Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
 

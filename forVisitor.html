@@ -26,16 +26,33 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <title>당신이 쿼카라면</title>
-
-
     <link rel="stylesheet" href="style.css">
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5fcc8dfaf2d34e72"></script>
-
-
+   
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
 
 <body>
+    <a id="kakao-link-btn" href="javascript:;">
+        <img src="//dev.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" />
+    </a>
+
+    <script type='text/javascript'>
+        //<![CDATA[
+        // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+        Kakao.init('7c93d6dea0692b1296d4960a0cff3934');
+        // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+        Kakao.Link.createCustomButton({
+            container: '#kakao-link-btn',
+            templateId: 42124,
+            templateArgs: {
+                'title': '타이틀',
+                'description': '설명 영역입니다.'
+            }
+        });
+  //]]>
+    </script>
+
+
     <div class="mb-7 addfitTop">
         <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-PnAixxFFcYzQ30Qu" data-ad-width="300"
             data-ad-height="250"></ins>
