@@ -31,21 +31,10 @@
     <link rel="stylesheet" href="style.css">
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5fcc8dfaf2d34e72"></script>
-    
+
     <!-- 카카오 메시지 -->
     <!-- Kakao API -->
-    <!-- <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-    <script>
-        Kakao.init('7c93d6dea0692b1296d4960a0cff3934');
-        console.log(Kakao.isInitialized());
-        $("#btn").click(function (e) { //jquery를 사용한다 가정
-            e.preventDefault();   //이벤트 버블링 prevent
-
-            Kakao.Link.sendCustom({
-                templateId: 42124   // 15번 항목에서 확인하였던 이벤트번호 등록 
-            });
-        });
-    </script> -->
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 
 </head>
 
@@ -131,12 +120,25 @@
             <p class="result-coupleEx"></p>
             <div id="label-container"></div>
 
-            <!-- 공유버튼 -->
-            <!-- Go to www.addthis.com/dashboard to customize your tools -->
-<!-- 
-            <div class="box_sns">
-                <a href="#btn" class="link_sns"></a>
-            </div> -->
+            <a id="kakao-link-btn" href="javascript:;">
+                <img src="//dev.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" />
+            </a>
+        
+            <script type='text/javascript'>
+                //<![CDATA[
+                // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+                Kakao.init('7c93d6dea0692b1296d4960a0cff3934');
+                // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+                Kakao.Link.createCustomButton({
+                    container: '#kakao-link-btn',
+                    templateId: 'result-num',
+                    templateArgs: {
+                        'title': '타이틀',
+                        'description': '설명 영역입니다.'
+                    }
+                });
+          //]]>
+            </script>
             <div class="image-title-wrap">
                 <button type="button" onclick="location.href='index.html'" class="remove-image"> 다른사진으로 재시도 </button>
             </div>
@@ -287,9 +289,11 @@
             var resultImage;
             var resultExample;
             var resultCouple;
+            var num;
             switch (prediction[0].className) {
                 case "stage0":
                     changeBG("steelblue");
+                    num=42124
                     resultMessage = "엄.근.진 시크한 매력의 쿼카"
                     resultImage = "<img class='file-upload-image' id='쿼카' src='img/000.gif' alt='your image' />"
                     resultExample = "쿼카라면 다 싱글벙글할거라고 생각했다면 큰 오산!\n노련한 눈빛으로 다른 쿼카들을 카리스마 있게 이끌어보세요!\n하지만 매력쟁이 쿼카인 당신은 수많은 쿼카들에게 고백으로 혼냄 당할수도..?! 5252~"
@@ -299,6 +303,7 @@
 
                 case "stage1":
                     changeBG("#964C35");
+                    num=42124
                     resultMessage = "맨날 졸려서 뒹굴거리는 쿼카"
                     resultImage = "<img class='file-upload-image' id='쿼카' src='img/100.gif' alt='your image' />"
                     resultExample = "사실 이거 테스트하기도 귀찮지만, 뒹굴거리다가 심심하니까 테스트했죠?\n당신은 태생부터 졸린 쿼카입니다. 하지만 당신은 자는 모습조차도 귀염둥이>_<\n이불속에서 뒹굴거리는게 최고지만, 막상 나온다면 일을 척척 해내는 쿼카입니다!"
@@ -308,6 +313,7 @@
 
                 case "stage2":
                     changeBG("seashell");
+                    num=42124
                     resultMessage = "(희귀종!)해맑은 순.수.덩.어.리. 쿼카"
                     resultImage = "<img class='file-upload-image' id='쿼카' src='img/200.gif' alt='your image' />"
                     resultExample = "이렇게 순수할수가!! 당신은 너무 순수하다가 못해 순진하다고 할까요?\n하지만 이러한 백지같은 매력의 당신을 좋아하는 쿼카들과 친하게 지내지만,\n사실 자기를 좋아하는 지는 몰라요! 헤헤~더 좋아해듀뎨됴 :)"
@@ -317,6 +323,7 @@
 
                 case "stage3":
                     changeBG("darkorange");
+                    num=42124
                     resultMessage = "그냥 다 주는대로 잘 먹는 폭식 쿼카"
                     resultImage = "<img class='file-upload-image' id='쿼카' src='img/300.gif' alt='your image' />"
                     resultExample = "쿼카계의 먹방 BJ.. 다른 쿼카들이 건네주는 음식은 다 잘 받아먹어요!\n처음보는 인간이 맛있는걸 주면 바로 홀라당 넘어가버려요! '맛있는거주는사람=좋은사람'\n당신과 친해지고 싶으면 먹을거를 주면 된다는것을 들키지마세요!"
@@ -326,6 +333,7 @@
 
                 case "stage4":
                     changeBG("lightpink");
+                    num=42124
                     resultMessage = "본인 아싸라고 기만하는 핵인싸 쿼카"
                     resultImage = "<img class='file-upload-image' id='쿼카' src='img/400.gif' alt='your image' />"
                     resultExample = "사실 본인이 인싸인거 알고 있잖아요~ 당신의 웃는 얼굴만 봐도 다른 쿼카들은 꺄르르~웃어넘어가요>.< \n주변에 항상 사람이 많은 쿼카상인 당신은 행복한 삶을 살고있습니다!\n주변 쿼카들한테 있을 때 잘하는거. 잊지 않기? 찡긋>.="
@@ -335,7 +343,8 @@
                 default:
                     resultMessage = "알수없음"
             }
-
+            console.log(num);
+            $('.result-num').html(num);
             $('.you-message').html(youMessage);
             $('.result-message').html(resultMessage);
             $('.result-image').html(resultImage);
