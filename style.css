@@ -279,3 +279,17 @@ navbar-brand {
   margin-bottom: 5.8rem;
   font-size: 1.9rem;
 }
+a.link_sns{
+    padding: 0 15px 15px 15px;
+    color: #222;
+    display:block;
+    width:120px;
+    height: 100px;
+    line-height:30px;
+    text-align:center;
+    /* 이미지 크기를 30*30 정사각형으로 지정하는 경우 */
+    padding-left:40px; /* 이미지와 글자사이 10px의 간격을 줌 */
+    background-image:url(img/kakao-talk.png);
+    background-repeat:no-repeat;
+    background-position:left center;
+}

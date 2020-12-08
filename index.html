@@ -43,6 +43,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
@@ -106,7 +107,6 @@
             </div>
         </div>
         <div class="file-upload-content">
-
             <img class="file-upload-image" id="face-image" src="#" alt="your image" />
             <!--결과창-->
             <p class="you-message"></p>
@@ -119,9 +119,10 @@
 
             <!-- 공유버튼 -->
             <!-- Go to www.addthis.com/dashboard to customize your tools -->
-            <div class="addthis_inline_share_toolbox"></div>
-
-
+        
+            <div class="box_sns">
+                <a href="#btn" class="link_sns" role="button"></a>
+            </div>
             <div class="image-title-wrap">
                 <button type="button" onclick="location.href='index.html'" class="remove-image"> 다른사진으로 재시도 </button>
             </div>
@@ -341,6 +342,20 @@
             document.getElementById("bgfile-upload").style.backgroundColor = color;  //RGB코드        
         }
 
+    </script>
+
+    <!--카카오 메시지-->
+    <!-- Kakao API -->
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script>
+        Kakao.init('7c93d6dea0692b1296d4960a0cff3934');
+        $("#btn").click(function (e) { //jquery를 사용한다 가정
+            e.preventDefault();   //이벤트 버블링 prevent
+
+            Kakao.Link.sendCustom({
+                templateId: 42124   // 15번 항목에서 확인하였던 이벤트번호 등록 
+            });
+        });
     </script>
 </body>
 <!-- Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
