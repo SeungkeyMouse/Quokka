@@ -3,6 +3,10 @@ body {
     background-color: cornsilk;
     text-align: center;
   }
+
+  .qqImage{
+    width: 5rem;
+  }
   .ad-banner{
     width: 320px;
     margin: 0 ato;
@@ -282,13 +286,12 @@ navbar-brand {
     background-position:left center;
 } */
 
-
 .remove-image {
   font-size: 1.4rem;
   width: fit-content;
   margin: 0;
   color: white;
-  background: black;
+ 
   padding: 1rem;
   border-radius: 1rem;
   /* border-bottom: black; */
@@ -297,7 +300,25 @@ navbar-brand {
   text-transform: uppercase;
   font-weight: 700;
   border-style: outset;
-  border-color: white;
+  /* border-color: white; */
+  border-radius: 1rem;
+  font-family: monospace;
+}
+.remove-image2 {
+  font-size: 1.4rem;
+  width: fit-content;
+  margin: 0;
+  color: black;
+  background-color: orange;
+  padding: 1rem;
+  border-radius: 1rem;
+  /* border-bottom: black; */
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-style: outset;
+  /* border-color: white; */
   border-radius: 1rem;
   font-family: monospace;
 }
