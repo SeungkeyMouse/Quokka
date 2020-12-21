@@ -295,7 +295,7 @@
             const prediction = await model.predict(image, false);
             prediction.sort((a, b) => parseFloat(b.probability) - (a.probability));
             console.log(prediction[0].className);
-            var youMessage = "당신은.."
+            var youMessage = "당신이 쿼카라면.."
             var resultMessage;
             var resultImage;
             var resultExample;
