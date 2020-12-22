@@ -79,6 +79,7 @@
             </form>
         </div>
     </nav>
+
     <section class="section">
         <div>
             <h1 class="title"> <img src="img/qqImage.png" class="qqImage"> 당신이 쿼카라면</h1>
@@ -86,6 +87,7 @@
 
         <h2 class="subtitle">당신은 어떤 쿼카인가요?</h2>
         <h3 class="title">인공지능으로 닮은 쿼카 찾기</h3>
+
     </section>
 
     <!-- 카카오광고 비활성화 -->
@@ -133,19 +135,30 @@
 
             <a id="kakao-link-btn" href="javascript:;">
                 <!-- <img src="img/kakao-talk.png" /> -->
-                <img class="shareKakao" src="img/ShareKakao.PNG" />
+                <img id="popOpenBtn" class="shareKakao" src="img/ShareKakao.PNG" />
             </a>
-            <div class="mt-5 coupang">
-                <script src="https://ads-partners.coupang.com/g.js"></script>
-                <script>
-                    new PartnersCoupang.G({ id: 389747 });
-                </script>
-
-            </div>
         </div>
     </div>
+
+    <!-- <button id="popOpenBtn">Popup Open</button> -->
+
+    <div id="popup_mask"></div> <!-- 팝업 배경 DIV -->
+
+    <div id="popupDiv">
+        <!-- 팝업창 -->
+        <div class="kakao-popup">
+            <ins class="kakao_ad_area" style="display:none;" 
+            data-ad-unit    = "DAN-FdH3c1shwBRUUlrV" 
+            data-ad-width   = "250" 
+            data-ad-height  = "250"></ins> 
+           <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+        </div>
+        <button id="popCloseBtn">닫기</button>
+        <div class="mt-3 mb-3 space"></div>
+        <button id="popCloseBtnMove" onclick="location.href='index.html'">다른사진으로 재시도!</button>
+    </div>
     <div class="image-title-wrap">
-        <button type="button" onclick="location.href='index.html'" class="remove-image" style="background-color: black">
+        <button id="popOpenBtn2" type="button" class="remove-image" style="background-color: black">
             다른사진으로 재시도 </button>
     </div>
     <div class="mt-3 image-title-wrap2">
@@ -178,7 +191,7 @@
                 <img src="img\youtube-copy.png" alt="youtube-icon" class="youtube-icon">
             </div>
         </div>
-        <iframe width=height="180" src="https://www.youtube.com/embed/s6SITKSN9Q0" frameborder="0"
+        <iframe width="180" src="https://www.youtube.com/embed/s6SITKSN9Q0" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
         <div class="container mt-5 youtube-cover d-flex flex-row-reverse ">
@@ -204,6 +217,55 @@
             (d.head || d.body).appendChild(s);
         })();
     </script>
+    
+    <!-- 팝업위치 -->
+    <script>
+    
+        $(document).ready(function(){
+            
+            $("#popOpenBtn").click(function(event){  //팝업 Open 버튼 클릭 시 
+                 $("#popupDiv").css({
+                    "top": (($(window).height()-$("#popupDiv").outerHeight())/2+$(window).scrollTop())+"px",
+                    "left": (($(window).width()-$("#popupDiv").outerWidth())/2+$(window).scrollLeft())+"px"
+                    //팝업창을 가운데로 띄우기 위해 현재 화면의 가운데 값과 스크롤 값을 계산하여 팝업창 CSS 설정
+                 
+                 }); 
+                
+                $("#popup_mask").css("display","block"); //팝업 뒷배경 display block
+                $("#popupDiv").css("display","block"); //팝업창 display block
+                
+                $("body").css("overflow","hidden");//body 스크롤바 없애기
+            });
+            $("#popOpenBtn2").click(function(event){  //팝업 Open 버튼 클릭 시 
+                 $("#popupDiv").css({
+                    "top": (($(window).height()-$("#popupDiv").outerHeight())/2+$(window).scrollTop())+"px",
+                    "left": (($(window).width()-$("#popupDiv").outerWidth())/2+$(window).scrollLeft())+"px"
+                    //팝업창을 가운데로 띄우기 위해 현재 화면의 가운데 값과 스크롤 값을 계산하여 팝업창 CSS 설정
+                 
+                 }); 
+                
+                $("#popup_mask").css("display","block"); //팝업 뒷배경 display block
+                $("#popupDiv").css("display","block"); //팝업창 display block
+                
+                $("body").css("overflow","hidden");//body 스크롤바 없애기
+            });
+            $("#popCloseBtn").click(function(event){
+                $("#popup_mask").css("display","none"); //팝업창 뒷배경 display none
+                $("#popupDiv").css("display","none"); //팝업창 display none
+                $("body").css("overflow","auto");//body 스크롤바 생성
+            });
+            $("#popCloseBtnMove").click(function(event){
+                $("#popup_mask").css("display","none"); //팝업창 뒷배경 display none
+                $("#popupDiv").css("display","none"); //팝업창 display none
+                $("body").css("overflow","auto");//body 스크롤바 생성
+            });
+            
+            
+        
+        });
+     
+     
+        </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
             Disqus.</a></noscript>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -258,6 +320,7 @@
         });
 
     </script>
+    
     <script type="text/javascript">
         // More API functions here:
         // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
