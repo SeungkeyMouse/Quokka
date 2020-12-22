@@ -241,11 +241,10 @@ navbar-brand {
   /* white-space: nowrap; */
 }
 
-.you-message{
-  margin-top: 5rem;
-  font-family: 'East Sea Dokdo', cursive;
-  font-size: 5.3rem;
-}
+  .you-message{
+    font-family: 'East Sea Dokdo', cursive;
+    font-size: 5rem;
+  }
 .result-message{
   margin-top: 0;
   font-family: 'East Sea Dokdo', cursive;
