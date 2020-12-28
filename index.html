@@ -17,6 +17,13 @@
     <meta property="og:description" content="당신이 쿼카라면 , 쿼카테스트" />
     <meta property="og:image" content="https://qqmouse.ga/img/OGImage.jpg" />
 
+    <!-- 네이버 최적화 -->
+    <meta name="NaverBot" content="All" />
+    <meta name="NaverBot" content="index,follow" />
+    <meta name="Yeti" content="All" />
+    <meta name="Yeti" content="index,follow" />
+
+
     <meta name="google-site-verification" content="8VPI3QJSaorYqunvNEPinNSffZih_hFuY8Ua8DTCwlY" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -184,304 +191,303 @@
     </section>
 
     <div id="disqus_thread"></div>
-   
-     <!-- <button id="popOpenBtn">Popup Open</button> -->
 
-     <div id="popup_mask"></div> <!-- 팝업 배경 DIV -->
+    <!-- <button id="popOpenBtn">Popup Open</button> -->
 
-     <div id="popupDiv">
-         <!-- 팝업창 -->
-         <div class="kakao-popup">
-             <ins class="kakao_ad_area" style="display:none;" 
-             data-ad-unit    = "DAN-FdH3c1shwBRUUlrV" 
-             data-ad-width   = "250" 
-             data-ad-height  = "250"></ins> 
+    <div id="popup_mask"></div> <!-- 팝업 배경 DIV -->
+
+    <div id="popupDiv">
+        <!-- 팝업창 -->
+        <div class="kakao-popup">
+            <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-FdH3c1shwBRUUlrV" data-ad-width="250"
+                data-ad-height="250"></ins>
             <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-         </div>
-         <button id="popCloseBtn">닫기</button>
-         <div class="mt-3 mb-3 space"></div>
-         <button id="popCloseBtnMove" onclick="location.href='index.html'">다른사진으로 재시도!</button>
-   <script>
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-        /*
-        var disqus_config = function () {
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        */
-        (function () { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://skmouse.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    
-    <!-- 팝업위치 -->
-    <script>
-    
-        $(document).ready(function(){
-            
-            $("#popOpenBtn").click(function(event){  //팝업 Open 버튼 클릭 시 
-                 $("#popupDiv").css({
-                    "top": (($(window).height()-$("#popupDiv").outerHeight())/2+$(window).scrollTop())+"px",
-                    "left": (($(window).width()-$("#popupDiv").outerWidth())/2+$(window).scrollLeft())+"px"
-                    //팝업창을 가운데로 띄우기 위해 현재 화면의 가운데 값과 스크롤 값을 계산하여 팝업창 CSS 설정
-                 
-                 }); 
-                
-                $("#popup_mask").css("display","block"); //팝업 뒷배경 display block
-                $("#popupDiv").css("display","block"); //팝업창 display block
-                
-                $("body").css("overflow","hidden");//body 스크롤바 없애기
-            });
-            $("#popOpenBtn2").click(function(event){  //팝업 Open 버튼 클릭 시 
-                 $("#popupDiv").css({
-                    "top": (($(window).height()-$("#popupDiv").outerHeight())/2+$(window).scrollTop())+"px",
-                    "left": (($(window).width()-$("#popupDiv").outerWidth())/2+$(window).scrollLeft())+"px"
-                    //팝업창을 가운데로 띄우기 위해 현재 화면의 가운데 값과 스크롤 값을 계산하여 팝업창 CSS 설정
-                 
-                 }); 
-                
-                $("#popup_mask").css("display","block"); //팝업 뒷배경 display block
-                $("#popupDiv").css("display","block"); //팝업창 display block
-                
-                $("body").css("overflow","hidden");//body 스크롤바 없애기
-            });
-            $("#popCloseBtn").click(function(event){
-                $("#popup_mask").css("display","none"); //팝업창 뒷배경 display none
-                $("#popupDiv").css("display","none"); //팝업창 display none
-                $("body").css("overflow","auto");//body 스크롤바 생성
-            });
-            $("#popCloseBtnMove").click(function(event){
-                $("#popup_mask").css("display","none"); //팝업창 뒷배경 display none
-                $("#popupDiv").css("display","none"); //팝업창 display none
-                $("body").css("overflow","auto");//body 스크롤바 생성
-            });
-            
-            
-        
-        });
-     
-     
+        </div>
+        <button id="popCloseBtn">닫기</button>
+        <div class="mt-3 mb-3 space"></div>
+        <button id="popCloseBtnMove" onclick="location.href='index.html'">다른사진으로 재시도!</button>
+        <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://skmouse.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
         </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
-            Disqus.</a></noscript>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
-        crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
-    <script>
-        function readURL(input) {
-            if (input.files && input.files[0]) {
+        <!-- 팝업위치 -->
+        <script>
 
-                var reader = new FileReader();
+            $(document).ready(function () {
 
-                reader.onload = function (e) {
-                    $('.image-upload-wrap').hide();
+                $("#popOpenBtn").click(function (event) {  //팝업 Open 버튼 클릭 시 
+                    $("#popupDiv").css({
+                        "top": (($(window).height() - $("#popupDiv").outerHeight()) / 2 + $(window).scrollTop()) + "px",
+                        "left": (($(window).width() - $("#popupDiv").outerWidth()) / 2 + $(window).scrollLeft()) + "px"
+                        //팝업창을 가운데로 띄우기 위해 현재 화면의 가운데 값과 스크롤 값을 계산하여 팝업창 CSS 설정
 
-                    $('.file-upload-image').attr('src', e.target.result);
-                    $('.file-upload-content').show();
+                    });
 
-                    $('.image-title').html(input.files[0].name);
-                };
+                    $("#popup_mask").css("display", "block"); //팝업 뒷배경 display block
+                    $("#popupDiv").css("display", "block"); //팝업창 display block
 
-                reader.readAsDataURL(input.files[0]);
-                init().then(() => {
-                    console.log("hello");
-                    predict();
+                    $("body").css("overflow", "hidden");//body 스크롤바 없애기
+                });
+                $("#popOpenBtn2").click(function (event) {  //팝업 Open 버튼 클릭 시 
+                    $("#popupDiv").css({
+                        "top": (($(window).height() - $("#popupDiv").outerHeight()) / 2 + $(window).scrollTop()) + "px",
+                        "left": (($(window).width() - $("#popupDiv").outerWidth()) / 2 + $(window).scrollLeft()) + "px"
+                        //팝업창을 가운데로 띄우기 위해 현재 화면의 가운데 값과 스크롤 값을 계산하여 팝업창 CSS 설정
+
+                    });
+
+                    $("#popup_mask").css("display", "block"); //팝업 뒷배경 display block
+                    $("#popupDiv").css("display", "block"); //팝업창 display block
+
+                    $("body").css("overflow", "hidden");//body 스크롤바 없애기
+                });
+                $("#popCloseBtn").click(function (event) {
+                    $("#popup_mask").css("display", "none"); //팝업창 뒷배경 display none
+                    $("#popupDiv").css("display", "none"); //팝업창 display none
+                    $("body").css("overflow", "auto");//body 스크롤바 생성
+                });
+                $("#popCloseBtnMove").click(function (event) {
+                    $("#popup_mask").css("display", "none"); //팝업창 뒷배경 display none
+                    $("#popupDiv").css("display", "none"); //팝업창 display none
+                    $("body").css("overflow", "auto");//body 스크롤바 생성
                 });
 
-            } else {
-                removeUpload();
-            }
-
-        }
-
-        function removeUpload() {
-            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
-            $('.file-upload-content').hide();
-            $('.image-upload-wrap').show();
-        }
-        $('.image-upload-wrap').bind('dragover', function () {
-            $('.image-upload-wrap').addClass('image-dropping');
-        });
-        $('.image-upload-wrap').bind('dragleave', function () {
-            $('.image-upload-wrap').removeClass('image-dropping');
-        });
-
-    </script>
-    
-    <script type="text/javascript">
-        // More API functions here:
-        // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
-
-        // the link to your model provided by Teachable Machine export panel
-        const URL = "https://teachablemachine.withgoogle.com/models/bjIWekRFs/";
-
-        let model, webcam, labelContainer, maxPredictions;
-
-        // Load the image model and setup the webcam
-        async function init() {
-            const modelURL = URL + "model.json";
-            const metadataURL = URL + "metadata.json";
-
-            // load the model and metadata
-            // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
-            // or files from your local hard drive
-            // Note: the pose library adds "tmImage" object to your window (window.tmImage)
-            model = await tmImage.load(modelURL, metadataURL);
-            maxPredictions = model.getTotalClasses();
 
 
-            labelContainer = document.getElementById("label-container");
-            for (let i = 0; i < maxPredictions; i++) { // and class labels
-                labelContainer.appendChild(document.createElement("div"));
-            }
-        }
-
-
-
-        // run the webcam image through the image model
-        async function predict() {
-            // predict can take in an image, video or canvas html element
-            var image = document.getElementById("face-image");
-            const prediction = await model.predict(image, false);
-            prediction.sort((a, b) => parseFloat(b.probability) - (a.probability));
-            console.log(prediction[0].className);
-            var youMessage = "당신이 쿼카라면.."
-            var resultMessage;
-            var resultImage;
-            var resultExample;
-            var resultCouple;
-            var num;
-            switch (prediction[0].className) {
-                case "stage0":
-                    changeBG("steelblue");
-                    num = 42124
-                    resultMessage = "츤데레같은 퇴폐미의 쿼카"
-                    resultImage = "<img class='file-upload-image' id='쿼카' src='img/000.gif' alt='your image' />"
-                    resultExample = "쿼카라면 다 싱글벙글할거라고 생각했다면 큰 오산!\n고혹한 눈빛으로 다른 쿼카들을 카리스마 있게 이끌어보세요!\n하지만 매력쟁이 쿼카인 당신은 수많은 쿼카들에게 고백으로 혼나버릴수도..?! 5252~"
-
-                    resultCouple = "당신의 베스트 쿼카: 그냥 다 주는대로 잘 먹는 폭식 쿼카\n"
-                    resultCoupleEx = "당신이 꼬시기 제일 쉬운 쿼카지만.. 쉽사리 꼬셨다가 당신의 지갑을 다 거덜내버릴수도..!"
-                    break;
-
-                case "stage1":
-                    changeBG("#964C35");
-                    num = 42144
-                    resultMessage = "졸려서 뒹굴거리는 휴학(퇴사)하고픈 쿼카"
-                    resultImage = "<img class='file-upload-image' id='쿼카' src='img/100.gif' alt='your image' />"
-                    resultExample = "사실 이거 테스트하기도 귀찮지만, 뒹굴거리다가 심심하니까 테스트했죠?\n당신은 태생부터 졸린 쿼카입니다. 하지만 당신은 자는 모습조차도 귀염둥이>_<\n이불속에서 뒹굴거리는게 최고지만, 막상 나온다면 일을 척척 해내는 쿼카입니다!"
-                    resultCouple = "당신의 베스트 쿼카 : 졸려서 뒹굴거리는 휴학(퇴사)하고픈 쿼카\n"
-                    resultCoupleEx = "같이 뒹굴거리면서 노는게 세상 제일 좋아요-.-"
-                    break;
-
-                case "stage2":
-                    changeBG("seashell");
-                    num = 42145
-                    resultMessage = "(희귀종!)해맑은 순.수.덩.어.리. 쿼카"
-                    resultImage = "<img class='file-upload-image' id='쿼카' src='img/200.gif' alt='your image' />"
-                    resultExample = "이렇게 순수할수가!! 당신은 너무 순수하다가 못해 순진하다고 할까요?\n하지만 이러한 백지같은 매력의 당신을 좋아하는 쿼카들과 친하게 지내지만,\n사실 자기를 좋아하는 지는 몰라요! 헤헤~더 좋아해듀뎨됴 :)"
-                    resultCouple = "당신의 베스트 쿼카: 본인을 아싸라고 기만하는 찐인싸 쿼카\n"
-                    resultCoupleEx = "찐인싸 쿼카와 함께라면 다른 쿼카들이 당신을 순수덩어리라고 무시하지 않을거에요!"
-                    break;
-
-                case "stage3":
-                    changeBG("darkorange");
-                    num = 42148
-                    resultMessage = "그냥 다 주는대로 잘 먹는 꿀꿀st 쿼카"
-                    resultImage = "<img class='file-upload-image' id='쿼카' src='img/300.gif' alt='your image' />"
-                    resultExample = "쿼카계의 먹방 BJ.. 다른 쿼카들이 건네주는 음식은 다 잘 받아먹어요!\n처음보는 인간이 맛있는걸 주면 바로 홀라당 넘어가버려요! '맛있는거주는사람=좋은사람'\n당신과 친해지고 싶으면 먹을거를 주면 된다는것을 들키지마세요!"
-                    resultCouple = "당신의 베스트 쿼카 : 츤데레같은 퇴폐미의 쿼카\n"
-                    resultCoupleEx = "시크하게 자기음식을 건네주는 쿼카의 모습에 당신은 홀라당 넘어가버릴지도..!"
-                    break;
-
-                case "stage4":
-                    changeBG("lightpink");
-                    num = 42150
-                    resultMessage = "본인 아싸라고 기만하는 찐인싸 쿼카"
-                    resultImage = "<img class='file-upload-image' id='쿼카' src='img/400.gif' alt='your image' />"
-                    resultExample = "사실 본인이 인싸인거 알고 있잖아요~ 당신의 웃는 얼굴만 봐도 다른 쿼카들은 꺄르르~웃어넘어가요>.< \n주변에 항상 사람이 많은 쿼카상인 당신은 행복한 삶을 살고있습니다!\n주변 쿼카들한테 있을 때 잘하는거. 잊지 않기? 찡긋>.="
-                    resultCouple = "당신의 베스트 쿼카 : 해맑은 순.수.덩.어.리 쿼카\n"
-                    resultCoupleEx = "순.수.덩.어.리인 쿼카가 곁에 있다면 당신을 한층 더 빛나게 해줄거에요!"
-                    break;
-
-                case "stage5":
-                    changeBG("lightyellow");
-                    num = 42347
-                    resultMessage = "용감한 수호자 쿼카"
-                    resultImage = "<img class='file-upload-image' id='쿼카' src='img/600.jpg' alt='your image' />"
-                    resultExample = "이 성향의 비율은 13%로, 쿼카 다수를 차지하지만 이보다 더 나은 성격 유형은 아마 없을 것입니다. 무엇을 받으면 몇 배로 베풀어주는 쿼카인 당신은, 타인과도 잘 어울려 일에 열정이 넘칩니다. 팀플을 한다면 당신은 버스기사님!!"
-                    resultCouple = "당신의 베스트 쿼카 : 츤데레같은 퇴폐미의 쿼카\n"
-                    resultCoupleEx = "츤데레 쿼카는 당신이 베풀면 은근슬쩍 다시 보답해줄 겁니다! 둘이 잘됐으면 좋겠다! 이미 잘된것같다! 사겨라!쨕! 결혼해!쨕! 애는셋.."
-                    break;
-
-                case "stage6":
-                    changeBG("lightseagreen");
-                    num = 42349
-                    resultMessage = "아싸중에서도 인싸 쿼카"
-                    resultImage = "<img class='file-upload-image' id='쿼카' src='img/700.jpg' alt='your image' />"
-                    resultExample = "낯을 가리지만 어느샌가 당신이 있는 곳에서 당신은 인싸처럼 됩니다. 분위기 메이킹을 위해 자본주의 미소(?)로 밝게 다닐때도 있습니다. 반면, 혼자 있을때는 조용한 이미지의 쿼카입니다. 당신은 선한 영향력을 끼치는 배려깊은 쿼카!"
-                    resultCouple = "당신의 베스트 쿼카 : 용감한 수호자 쿼카\n"
-                    resultCoupleEx = "용감한 수호자 쿼카와 함께 있으면 당신은 아싸끼리 모여 인싸가 될 수 있습니다!"
-                    break;
-                default:
-                    resultMessage = "알수없음"
-            }
-            console.log("jquery" + num);
-            $('.you-message').html(youMessage);
-            $('.result-message').html(resultMessage);
-            $('.result-image').html(resultImage).ready(
-                $('.loadingText').hide()
-
-            )
-            $('.result-example').html(resultExample);
-            $('.result-couple').html(resultCouple);
-            $('.result-coupleEx').html(resultCoupleEx);
-            $('.spinner-border').hide();
-
-            //결과창 텍스트 출력
-            /*
-            for (let i = 0; i < maxPredictions; i++) {
-                const classPrediction =
-                    "<img class='file-upload-image' id='쿼카' src='img/001.jpg' alt='your image' />"
-                    
-                labelContainer.childNodes[i].innerHTML = classPrediction;
-            }
-            */
-            console.log(num)
-
-            //<![CDATA[
-            // // 사용할 앱의 JavaScript 키를 설정해 주세요.
-            Kakao.init('7c93d6dea0692b1296d4960a0cff3934');
-            // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
-            Kakao.Link.createCustomButton({
-                container: '#kakao-link-btn',
-                templateId: num,
-                templateArgs: {
-                    'title': '타이틀',
-                    'description': '설명 영역입니다.'
-                }
             });
 
 
-        }
-        function changeBG(color) {
-            document.getElementById("bgfile-upload").style.backgroundColor = color;  //RGB코드        
-        }
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+                Disqus.</a></noscript>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+            integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+            crossorigin="anonymous"></script>
 
-    </script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+        <script>
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('.image-upload-wrap').hide();
+
+                        $('.file-upload-image').attr('src', e.target.result);
+                        $('.file-upload-content').show();
+
+                        $('.image-title').html(input.files[0].name);
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                    init().then(() => {
+                        console.log("hello");
+                        predict();
+                    });
+
+                } else {
+                    removeUpload();
+                }
+
+            }
+
+            function removeUpload() {
+                $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+                $('.file-upload-content').hide();
+                $('.image-upload-wrap').show();
+            }
+            $('.image-upload-wrap').bind('dragover', function () {
+                $('.image-upload-wrap').addClass('image-dropping');
+            });
+            $('.image-upload-wrap').bind('dragleave', function () {
+                $('.image-upload-wrap').removeClass('image-dropping');
+            });
+
+        </script>
+
+        <script type="text/javascript">
+            // More API functions here:
+            // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+            // the link to your model provided by Teachable Machine export panel
+            const URL = "https://teachablemachine.withgoogle.com/models/fGlu_typ5/";
+
+            let model, webcam, labelContainer, maxPredictions;
+
+            // Load the image model and setup the webcam
+            async function init() {
+                const modelURL = URL + "model.json";
+                const metadataURL = URL + "metadata.json";
+
+                // load the model and metadata
+                // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+                // or files from your local hard drive
+                // Note: the pose library adds "tmImage" object to your window (window.tmImage)
+                model = await tmImage.load(modelURL, metadataURL);
+                maxPredictions = model.getTotalClasses();
+
+
+                labelContainer = document.getElementById("label-container");
+                for (let i = 0; i < maxPredictions; i++) { // and class labels
+                    labelContainer.appendChild(document.createElement("div"));
+                }
+            }
+
+
+
+            // run the webcam image through the image model
+            async function predict() {
+                // predict can take in an image, video or canvas html element
+                var image = document.getElementById("face-image");
+                const prediction = await model.predict(image, false);
+                prediction.sort((a, b) => parseFloat(b.probability) - (a.probability));
+                console.log(prediction[0].className);
+                var youMessage = "당신이 쿼카라면.."
+                var resultMessage;
+                var resultImage;
+                var resultExample;
+                var resultCouple;
+                var num;
+                switch (prediction[0].className) {
+                    case "stage0":
+                        changeBG("steelblue");
+                        num = 42124
+                        resultMessage = "츤데레같은 퇴폐미의 쿼카"
+                        resultImage = "<img class='file-upload-image' id='쿼카' src='img/000.gif' alt='your image' />"
+                        resultExample = "쿼카라면 다 싱글벙글할거라고 생각했다면 큰 오산!\n고혹한 눈빛으로 다른 쿼카들을 카리스마 있게 이끌어보세요!\n하지만 매력쟁이 쿼카인 당신은 수많은 쿼카들에게 고백으로 혼나버릴수도..?! 5252~"
+
+                        resultCouple = "당신의 베스트 쿼카: 그냥 다 주는대로 잘 먹는 폭식 쿼카\n"
+                        resultCoupleEx = "당신이 꼬시기 제일 쉬운 쿼카지만.. 쉽사리 꼬셨다가 당신의 지갑을 다 거덜내버릴수도..!"
+                        break;
+
+                    case "stage1":
+                        changeBG("#964C35");
+                        num = 42144
+                        resultMessage = "졸려서 뒹굴거리는 휴학(퇴사)하고픈 쿼카"
+                        resultImage = "<img class='file-upload-image' id='쿼카' src='img/100.gif' alt='your image' />"
+                        resultExample = "사실 이거 테스트하기도 귀찮지만, 뒹굴거리다가 심심하니까 테스트했죠?\n당신은 태생부터 졸린 쿼카입니다. 하지만 당신은 자는 모습조차도 귀염둥이>_<\n이불속에서 뒹굴거리는게 최고지만, 막상 나온다면 일을 척척 해내는 쿼카입니다!"
+                        resultCouple = "당신의 베스트 쿼카 : 졸려서 뒹굴거리는 휴학(퇴사)하고픈 쿼카\n"
+                        resultCoupleEx = "같이 뒹굴거리면서 노는게 세상 제일 좋아요-.-"
+                        break;
+
+                    case "stage2":
+                        changeBG("seashell");
+                        num = 42145
+                        resultMessage = "(희귀종!)해맑은 순.수.덩.어.리. 쿼카"
+                        resultImage = "<img class='file-upload-image' id='쿼카' src='img/200.gif' alt='your image' />"
+                        resultExample = "이렇게 순수할수가!! 당신은 너무 순수하다가 못해 순진하다고 할까요?\n하지만 이러한 백지같은 매력의 당신을 좋아하는 쿼카들과 친하게 지내지만,\n사실 자기를 좋아하는 지는 몰라요! 헤헤~더 좋아해듀뎨됴 :)"
+                        resultCouple = "당신의 베스트 쿼카: 본인을 아싸라고 기만하는 찐인싸 쿼카\n"
+                        resultCoupleEx = "찐인싸 쿼카와 함께라면 다른 쿼카들이 당신을 순수덩어리라고 무시하지 않을거에요!"
+                        break;
+
+                    case "stage3":
+                        changeBG("darkorange");
+                        num = 42148
+                        resultMessage = "그냥 다 주는대로 잘 먹는 꿀꿀st 쿼카"
+                        resultImage = "<img class='file-upload-image' id='쿼카' src='img/300.gif' alt='your image' />"
+                        resultExample = "쿼카계의 먹방 BJ.. 다른 쿼카들이 건네주는 음식은 다 잘 받아먹어요!\n처음보는 인간이 맛있는걸 주면 바로 홀라당 넘어가버려요! '맛있는거주는사람=좋은사람'\n당신과 친해지고 싶으면 먹을거를 주면 된다는것을 들키지마세요!"
+                        resultCouple = "당신의 베스트 쿼카 : 츤데레같은 퇴폐미의 쿼카\n"
+                        resultCoupleEx = "시크하게 자기음식을 건네주는 쿼카의 모습에 당신은 홀라당 넘어가버릴지도..!"
+                        break;
+
+                    case "stage4":
+                        changeBG("lightpink");
+                        num = 42150
+                        resultMessage = "본인 아싸라고 기만하는 찐인싸 쿼카"
+                        resultImage = "<img class='file-upload-image' id='쿼카' src='img/400.gif' alt='your image' />"
+                        resultExample = "사실 본인이 인싸인거 알고 있잖아요~ 당신의 웃는 얼굴만 봐도 다른 쿼카들은 꺄르르~웃어넘어가요>.< \n주변에 항상 사람이 많은 쿼카상인 당신은 행복한 삶을 살고있습니다!\n주변 쿼카들한테 있을 때 잘하는거. 잊지 않기? 찡긋>.="
+                        resultCouple = "당신의 베스트 쿼카 : 해맑은 순.수.덩.어.리 쿼카\n"
+                        resultCoupleEx = "순.수.덩.어.리인 쿼카가 곁에 있다면 당신을 한층 더 빛나게 해줄거에요!"
+                        break;
+
+                    case "stage5":
+                        changeBG("lightyellow");
+                        num = 42347
+                        resultMessage = "용감한 수호자 쿼카"
+                        resultImage = "<img class='file-upload-image' id='쿼카' src='img/600.jpg' alt='your image' />"
+                        resultExample = "이 성향의 비율은 13%로, 쿼카 다수를 차지하지만 이보다 더 나은 성격 유형은 아마 없을 것입니다. 무엇을 받으면 몇 배로 베풀어주는 쿼카인 당신은, 타인과도 잘 어울려 일에 열정이 넘칩니다. 팀플을 한다면 당신은 버스기사님!!"
+                        resultCouple = "당신의 베스트 쿼카 : 츤데레같은 퇴폐미의 쿼카\n"
+                        resultCoupleEx = "츤데레 쿼카는 당신이 베풀면 은근슬쩍 다시 보답해줄 겁니다! 둘이 잘됐으면 좋겠다! 이미 잘된것같다! 사겨라!쨕! 결혼해!쨕! 애는셋.."
+                        break;
+
+                    case "stage6":
+                        changeBG("lightseagreen");
+                        num = 42349
+                        resultMessage = "아싸중에서도 인싸 쿼카"
+                        resultImage = "<img class='file-upload-image' id='쿼카' src='img/700.jpg' alt='your image' />"
+                        resultExample = "낯을 가리지만 어느샌가 당신이 있는 곳에서 당신은 인싸처럼 됩니다. 분위기 메이킹을 위해 자본주의 미소(?)로 밝게 다닐때도 있습니다. 반면, 혼자 있을때는 조용한 이미지의 쿼카입니다. 당신은 선한 영향력을 끼치는 배려깊은 쿼카!"
+                        resultCouple = "당신의 베스트 쿼카 : 용감한 수호자 쿼카\n"
+                        resultCoupleEx = "용감한 수호자 쿼카와 함께 있으면 당신은 아싸끼리 모여 인싸가 될 수 있습니다!"
+                        break;
+                    default:
+                        resultMessage = "알수없음"
+                }
+                console.log("jquery" + num);
+                $('.you-message').html(youMessage);
+                $('.result-message').html(resultMessage);
+                $('.result-image').html(resultImage).ready(
+                    $('.loadingText').hide()
+
+                )
+                $('.result-example').html(resultExample);
+                $('.result-couple').html(resultCouple);
+                $('.result-coupleEx').html(resultCoupleEx);
+                $('.spinner-border').hide();
+
+                //결과창 텍스트 출력
+                /*
+                for (let i = 0; i < maxPredictions; i++) {
+                    const classPrediction =
+                        "<img class='file-upload-image' id='쿼카' src='img/001.jpg' alt='your image' />"
+                        
+                    labelContainer.childNodes[i].innerHTML = classPrediction;
+                }
+                */
+                console.log(num)
+
+                //<![CDATA[
+                // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+                Kakao.init('7c93d6dea0692b1296d4960a0cff3934');
+                // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+                Kakao.Link.createCustomButton({
+                    container: '#kakao-link-btn',
+                    templateId: num,
+                    templateArgs: {
+                        'title': '타이틀',
+                        'description': '설명 영역입니다.'
+                    }
+                });
+
+
+            }
+            function changeBG(color) {
+                document.getElementById("bgfile-upload").style.backgroundColor = color;  //RGB코드        
+            }
+
+        </script>
 
 
 </body>
