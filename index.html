@@ -329,12 +329,32 @@
         </script>
 
         <script type="text/javascript">
+            function getTodayLabel() {
+
+                var week = new Array('일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일');
+
+                var today = new Date().getDay();
+                var todayLabel = week[today];
+
+                return todayLabel;
+            }
+           
+            // 목요일
+            var URL = "https://teachablemachine.withgoogle.com/models/bjIWekRFs/";
+            var todayLabel = getTodayLabel();
+            if (todayLabel == '월요일' || todayLabel == '수요일' || todayLabel == '토요일')
+                URL = "https://teachablemachine.withgoogle.com/models/fGlu_typ5/";
+            else
+                URL = "https://teachablemachine.withgoogle.com/models/bjIWekRFs/";
+
+            console.log(todayLabel + URL);
+            
+
             // More API functions here:
             // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
             //용감 https://teachablemachine.withgoogle.com/models/fGlu_typ5/
             //초기 인싸 https://teachablemachine.withgoogle.com/models/bjIWekRFs/
             // the link to your model provided by Teachable Machine export panel
-            const URL = "https://teachablemachine.withgoogle.com/models/bjIWekRFs/";
 
             let model, webcam, labelContainer, maxPredictions;
 
